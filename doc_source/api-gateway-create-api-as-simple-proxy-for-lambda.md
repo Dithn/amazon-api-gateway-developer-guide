@@ -199,7 +199,7 @@ You can use a browser or [cURL](https://curl.haxx.se/) to test your API\.
 
 To test `GET` requests using only query string parameters, you can type the URL for the API's `helloworld` resource into a browser address bar\. For example: https://*r275xc9bmd*\.execute\-api\.*us\-east\-1*\.amazonaws\.com/test/helloworld?name=John&city=Seattle
 
-For other methods, you must use more advanced REST API testing utilities, such as [POSTMAN](https://www.getpostman.com/) or [cURL](https://curl.haxx.se/)\. This tutorial uses cURL\. The cURL command examples below assume that cURL is installed on your computer\.
+For other methods, you must use more advanced REST API testing utilities, such as [POSTMAN](https://www.postman.com/) or [cURL](https://curl.haxx.se/)\. This tutorial uses cURL\. The cURL command examples below assume that cURL is installed on your computer\.
 
 **To test the deployed API using cURL:**
 
@@ -296,7 +296,7 @@ To test the `GET` method, copy the following `cURL` command and paste it into th
 
 ```
 curl -X GET \
-  'https://r275xc9bmd.execute-api.us-east-1.amazonaws.com/test/helloworld?Seattle?name=John' \
+  'https://r275xc9bmd.execute-api.us-east-1.amazonaws.com/test/helloworld?name=John&city=Seattle' \
   -H 'content-type: application/json' \
   -H 'day: Thursday'
 ```

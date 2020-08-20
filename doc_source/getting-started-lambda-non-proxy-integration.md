@@ -70,7 +70,7 @@ In addition, the function logs its execution to Amazon CloudWatch by calling `co
 
 If you set up the API without using the API Gateway console, such as when [importing an API from an OpenAPI file](https://github.com/awslabs/api-gateway-secure-pet-store/blob/master/src/main/resources/swagger.yaml#L39), you must explicitly create, if necessary, and set up an invocation role and policy for API Gateway to invoke the Lambda functions\. For more information on how to set up Lambda invocation and execution roles for an API Gateway API, see [Control access to an API with IAM permissions](permissions.md)\. 
 
- Compared to `GetStartedLambdaProxyIntegation`, the Lambda function for the Lambda proxy integration, the `GetStartedLambdaIntegration` Lambda function for the Lambda custom integration only takes input from the API Gateway API integration request body\. The function can return an output of any JSON object, a string, a number, a Boolean, or even a binary blob\. The Lambda function for the Lambda proxy integration, in contrast, can take the input from any request data, but must return an output of a particular JSON object\. The `GetStartedLambdaIntegration` function for the Lambda custom integration can have the API request parameters as input, provided that API Gateway maps the required API request parameters to the integration request body before forwarding the client request to the backend\. For this to happen, the API developer must create a mapping template and configure it on the API method when creating the API\. 
+ Compared to `GetStartedLambdaProxyIntegration`, the Lambda function for the Lambda proxy integration, the `GetStartedLambdaIntegration` Lambda function for the Lambda custom integration only takes input from the API Gateway API integration request body\. The function can return an output of any JSON object, a string, a number, a Boolean, or even a binary blob\. The Lambda function for the Lambda proxy integration, in contrast, can take the input from any request data, but must return an output of a particular JSON object\. The `GetStartedLambdaIntegration` function for the Lambda custom integration can have the API request parameters as input, provided that API Gateway maps the required API request parameters to the integration request body before forwarding the client request to the backend\. For this to happen, the API developer must create a mapping template and configure it on the API method when creating the API\. 
 
 Now, create the `GetStartedLambdaIntegration` Lambda function\. 
 
@@ -108,7 +108,7 @@ Now, create the `GetStartedLambdaIntegration` Lambda function\.
 
 1. To test the newly created function, choose **Configure test events** from **Select a test event\.\.\.**\.
 
-   1. For **Create new event**, replace any default code statements with the following, type HellowWorldTest for the Event aname, and choose **Create**\.
+   1. For **Create new event**, replace any default code statements with the following, enter **HelloWorldTest** for the event name, and choose **Create**\.
 
       ```
       {
@@ -385,7 +385,7 @@ The input must be UTF\-8 encoded \(i\.e\., unlocalized\) text\.
 
 ## Test the API in a deployment stage<a name="getting-started-test"></a>
 
-There are several ways you can test a deployed API\. For GET requests using only URL path variables or query string parameters, you can type the API resource URL in a browser\. For other methods, you must use more advanced REST API testing utilities, such as [POSTMAN](https://www.getpostman.com/) or [cURL](https://curl.haxx.se/)\.
+There are several ways you can test a deployed API\. For GET requests using only URL path variables or query string parameters, you can type the API resource URL in a browser\. For other methods, you must use more advanced REST API testing utilities, such as [POSTMAN](https://www.postman.com/) or [cURL](https://curl.haxx.se/)\.
 
 **To test the API using cURL**
 
